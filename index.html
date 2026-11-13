@@ -27,6 +27,7 @@ footer{padding:30px 0;color:#7e8ca5;font-size:11px}.footer-inner{display:flex;ju
 .reveal{opacity:0;transform:translateY(16px);transition:opacity .65s ease,transform .65s ease}.reveal.visible{opacity:1;transform:none}
 @media(max-width:800px){.nav-links{gap:16px}.hero{grid-template-columns:1fr .65fr;gap:32px;padding:70px 0}.portrait-wrap{max-width:270px}.about-grid{gap:25px}.project.featured{grid-template-columns:1fr}.project-aside{display:none}}
 @media(max-width:650px){.wrap{width:min(var(--max),calc(100% - 34px))}.nav{height:66px}.menu-btn{display:block}.nav-links{display:none;position:absolute;top:66px;left:0;right:0;padding:15px 22px 22px;background:#0c1220;border-bottom:1px solid var(--line);flex-direction:column;align-items:stretch;gap:0}.nav-links.open{display:flex}.nav-links a{padding:12px 0;border-bottom:1px solid rgba(38,50,73,.6)}.nav-cta{margin-top:12px;text-align:center}.hero{display:flex;flex-direction:column-reverse;align-items:stretch;padding:48px 0 55px;gap:34px;min-height:auto}.portrait-wrap{max-width:230px;justify-self:auto;align-self:center}.hero-copy{font-size:15px}h1{font-size:clamp(44px,12vw,62px);margin:20px 0 15px}.hero-note{font-size:10px}.actions .btn{flex:1}.metrics{margin-bottom:55px}.metric{padding:15px 12px}.metric strong{font-size:22px}.metric span{font-size:10px}section{padding:62px 0}.section-head{display:block}.section-head p{margin-top:12px}.about-grid,.project-grid,.skills-grid,.timeline{grid-template-columns:1fr}.project.featured{grid-column:auto}.project{padding:21px}.contact-links{gap:15px}.footer-inner{display:block}.footer-inner span{display:block;margin-top:7px}}
+.contact-form{display:grid;grid-template-columns:1fr 1fr;gap:12px;max-width:700px;margin-top:28px}.contact-form label{display:grid;gap:7px;color:#c4d0e4;font-size:12px}.contact-form label.full{grid-column:1/-1}.contact-form input,.contact-form textarea{width:100%;background:#0b1220;border:1px solid #34425b;border-radius:8px;padding:12px;color:var(--text);font:inherit}.contact-form button{border:0;cursor:pointer;justify-self:start}.contact-form .hp{display:none}@media(max-width:650px){.contact-form{grid-template-columns:1fr}.contact-form label.full{grid-column:auto}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none;transition:none}.btn,.project{transition:none}}
 </style>
 </head>
@@ -100,6 +101,14 @@ footer{padding:30px 0;color:#7e8ca5;font-size:11px}.footer-inner{display:flex;ju
 <p class="eyebrow">06 / Contact</p><h2>Have a project or opportunity in mind?</h2><p>I’m open to junior frontend opportunities, internships, freelance projects, and collaborations. Tell me what you’re working on and let’s explore how I can contribute.</p>
 <div class="actions"><a class="btn primary" href="mailto:reatpuokbol@gmail.com?subject=Let's%20work%20together">Email me ↗</a><a class="btn secondary" href="https://wa.me/251967123461" target="_blank" rel="noopener">WhatsApp ↗</a></div>
 <div class="contact-links"><a href="https://www.linkedin.com/in/reat-puok-bol" target="_blank" rel="noopener">LinkedIn ↗</a><a href="https://github.com/Reatboltut" target="_blank" rel="noopener">GitHub ↗</a><a href="https://www.facebook.com/reat.boltut" target="_blank" rel="noopener">Facebook ↗</a><a href="mailto:reatpuokbol@gmail.com">reatpuokbol@gmail.com</a></div>
+<form class="contact-form" name="contact" method="POST" action="/" data-netlify="true" netlify-honeypot="bot-field">
+<input type="hidden" name="form-name" value="contact">
+<p class="hp" hidden><label>Do not fill this out<input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+<label>Your name<input name="name" autocomplete="name" required placeholder="Your name"></label>
+<label>Your email<input name="email" type="email" autocomplete="email" required placeholder="you@example.com"></label>
+<label class="full">Tell me about your project or opportunity<textarea name="message" rows="4" required placeholder="A few details about what you have in mind..."></textarea></label>
+<button class="btn primary" type="submit">Send message ↗</button>
+</form>
 </div></div></section>
 </main>
 <footer><div class="wrap footer-inner"><strong>Reat Puok Bol <span style="color:var(--blue)">·</span> Frontend Developer</strong><span>© 2026 Reat Puok Bol · Built with purpose in Addis Ababa, Ethiopia.</span></div></footer>
